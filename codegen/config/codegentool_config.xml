@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<code-gen>
+
+	<condition-operators>
+		<operator>Contains</operator>
+		<operator>DoesNotContain</operator>
+		<operator>LogicalAND</operator>
+		<operator>LogicalOR</operator>
+		<operator>Equals</operator>
+		<operator>NotEquals</operator>
+		<operator>LessThan</operator>
+		<operator>LessThanAndEquals</operator>
+		<operator>Boolean</operator>
+		<operator>LogicalComplement</operator>
+	</condition-operators>
+
+	<expression-operators>
+		<operator>Plus</operator>
+		<operator>Minus</operator>
+		<operator>Multiply</operator>
+		<operator>Divide</operator>
+		<operator>Modulus</operator>
+	</expression-operators>
+
+	<webflow-types>
+		<type>Search</type>
+		<type>ResultLinks</type>
+		<type>Result</type>
+	</webflow-types>
+
+	<browsers-to-execute>
+		<browser>Primary</browser>
+		<browser>Secondary</browser>
+		<browser>Tertiary</browser>
+	</browsers-to-execute>
+
+	<variable-types>
+		<type>string</type>
+		<type>int</type>
+	</variable-types>
+
+	<function-definitions>
+
+		<function-definition packageName="Functions" className="Text" name="TextBeforeTag1UntilTag2" staticAccess="true" instanceAccess="false" variableReferenceName="">
+			<parameters>
+				<parameter type="string" name="input" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="tag1" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="tag2" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="Functions" className="Text" name="TextBetweenTags" staticAccess="true" instanceAccess="false" variableReferenceName="">
+			<parameters>
+				<parameter type="string" name="input" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="tag1" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="tag2" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="Functions" className="Text" name="ReplaceTag1WithTag2" staticAccess="true" instanceAccess="false" variableReferenceName="">
+			<parameters>
+				<parameter type="string" name="input" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="tag1" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="tag2" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="Functions" className="Text" name="GetTextStringBetweenTags" staticAccess="true" instanceAccess="false" variableReferenceName="">
+			<parameters>
+				<parameter type="string" name="value" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="startTag" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="endTag" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="csExWB" className="cEXWB" name="SelectOptionItemWithOnChange" staticAccess="false" instanceAccess="true" variableReferenceName="_primaryBrowser">
+			<parameters>
+				<parameter type="string" name="selectName" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="optionValue" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="optionText" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="csExWB" className="cEXWB" name="AutomationTask_PerformEnterData" staticAccess="false" instanceAccess="true" variableReferenceName="_primaryBrowser">
+			<parameters>
+				<parameter type="string" name="inputname" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="strValue" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="csExWB" className="cEXWB" name="SetNextFileDownloadPathAndName" staticAccess="false" instanceAccess="true" variableReferenceName="_primaryBrowser">
+			<parameters>
+				<parameter type="string" name="pathandFilename" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="csExWB" className="cEXWB" name="LocationUrl" staticAccess="false" instanceAccess="true" variableReferenceName="_primaryBrowser">
+			<parameters />
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="System" className="DateTime" name="Now.AddDays" staticAccess="true" instanceAccess="true" variableReferenceName="dateTime">
+			<parameters>
+				<parameter type="double" name="value" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions>
+				<supporting-function name="ToString">
+					<parameters>
+						<parameter type="string" name="format" value="" passByReference="" passByValue=""/>
+					</parameters>
+				</supporting-function>
+			</supporting-functions>
+		</function-definition>
+
+		<function-definition packageName="Functions" className="FileOperation" name="GetRootPath" staticAccess="true" instanceAccess="true" variableReferenceName="fileOperation">
+			<parameters>
+				<parameter type="string" name="folderName" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="Functions" className="Web" name="DownloadFile" staticAccess="true" instanceAccess="true" variableReferenceName="downloadFile">
+			<parameters>
+				<parameter type="string" name="url" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="fileName" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="System.IO" className="File" name="Delete" staticAccess="true" instanceAccess="true" variableReferenceName="file">
+			<parameters>
+				<parameter type="string" name="path" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="System.IO" className="File" name="Exists" staticAccess="true" instanceAccess="true" variableReferenceName="file">
+			<parameters>
+				<parameter type="string" name="path" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="RegularExpressions" className="Regex" name="Split" staticAccess="true" instanceAccess="true" variableReferenceName="regex">
+			<parameters>
+				<parameter type="string" name="input" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="pattern" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="RegularExpressions" className="Regex" name="Matches" staticAccess="true" instanceAccess="true" variableReferenceName="regex">
+			<parameters>
+				<parameter type="string" name="input" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="pattern" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="RegularExpressions" className="Regex" name="Replace" staticAccess="true" instanceAccess="true" variableReferenceName="regex">
+			<parameters>
+				<parameter type="string" name="input" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="pattern" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="replacement" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+		<function-definition packageName="RegularExpressions" className="Regex" name="IsMatch" staticAccess="true" instanceAccess="true" variableReferenceName="regex">
+			<parameters>
+				<parameter type="string" name="input" value="" passByReference="" passByValue=""/>
+				<parameter type="string" name="pattern" value="" passByReference="" passByValue=""/>
+			</parameters>
+			<supporting-functions />
+		</function-definition>
+
+	</function-definitions>
+
+	<element-definitions>
+
+		<element-definition tagType="Image">
+			<supported-fields>
+				<field>InnerHTML</field>
+				<field>Value</field>
+				<field>Name</field>
+				<field>Source</field>
+				<field>Type</field>
+				<field>HREF</field>
+				<field>ID</field>
+				<field>ClassName</field>
+				<field>CheckedAttribute</field>
+				<field>InnerText</field>
+			</supported-fields>
+		</element-definition>
+
+		<element-definition tagType="Anchor">
+			<supported-fields>
+				<field>InnerHTML</field>
+				<field>Value</field>
+				<field>Name</field>
+				<field>Source</field>
+				<field>Type</field>
+				<field>HREF</field>
+				<field>ID</field>
+				<field>ClassName</field>
+				<field>CheckedAttribute</field>
+				<field>InnerText</field>
+			</supported-fields>
+		</element-definition>
+
+		<element-definition tagType="Input">
+			<supported-fields>
+				<field>InnerHTML</field>
+				<field>Value</field>
+				<field>Name</field>
+				<field>Source</field>
+				<field>Type</field>
+				<field>HREF</field>
+				<field>ID</field>
+				<field>ClassName</field>
+				<field>CheckedAttribute</field>
+				<field>InnerText</field>
+			</supported-fields>
+		</element-definition>
+
+		<element-definition tagType="Button">
+			<supported-fields>
+				<field>InnerHTML</field>
+				<field>Value</field>
+				<field>Name</field>
+				<field>Source</field>
+				<field>Type</field>
+				<field>HREF</field>
+				<field>ID</field>
+				<field>ClassName</field>
+				<field>CheckedAttribute</field>
+				<field>InnerText</field>
+			</supported-fields>
+		</element-definition>
+
+	</element-definitions>
+
+	<supported-tables>
+
+		<table-definition name="PopBid" displayName="Bid" showInUI="true" usedInBidCrawler="true" usedInOrgCrawler="false" usedInBidResultsCrawler="false" usedInPlanHolderCrawler="false">
+			<column-definition name="NO_COLUMN_MAPPING" dataType="string" variableName="fullBid" />
+			<column-definition name="SourceProposalType" dataType="string" variableName="sourceProposalType" />
+			<column-definition name="BidNumber" dataType="string" variableName="bidNumber" />
+			<column-definition name="PostedDate" dataType="string" variableName="postedDate" />
+			<column-definition name="AmendmentVersion" dataType="string" variableName="amendmentVersion" />
+			<column-definition name="SubmittalDate" dataType="string" variableName="submittalDate" />
+			<column-definition name="Title" dataType="string" variableName="title" />
+			<default-column-value-mapping />
+		</table-definition>
+
+		<table-definition name="PopBidIndustryCode" displayName="Bid Industry Code" showInUI="true" usedInBidCrawler="true" usedInOrgCrawler="false" usedInBidResultsCrawler="false" usedInPlanHolderCrawler="false">
+			<column-definition name="IndustryCode_ID" dataType="string" variableName="industryCode" />
+			<default-column-value-mapping>
+				<default-value columnName="BidID" defaultValue="bidID" passByValue="false" />
+				<default-value columnName="IndustryType" defaultValue="" passByValue="true" />
+			</default-column-value-mapping>
+		</table-definition>
+
+		<table-definition name="PopBidLocation" displayName="Bid Location" showInUI="true" usedInBidCrawler="true" usedInOrgCrawler="false" usedInBidResultsCrawler="false" usedInPlanHolderCrawler="false">
+			<column-definition name="City" dataType="string" variableName="agencyLocationCity" />
+			<column-definition name="State" dataType="string" variableName="agencyLocationState" />
+			<column-definition name="UnparsedContent" dataType="string" variableName="agencyLocation" />
+			<default-column-value-mapping>
+				<default-value columnName="BidID" defaultValue="bidID" passByValue="false" />
+				<default-value columnName="LocationOf" defaultValue="Agency" passByValue="true" />
+			</default-column-value-mapping>
+		</table-definition>
+
+		<table-definition name="PopBidContact" displayName="Bid Contact" showInUI="true" usedInBidCrawler="true" usedInOrgCrawler="false" usedInBidResultsCrawler="false" usedInPlanHolderCrawler="false">
+			<column-definition name="Email" dataType="string" variableName="agencyContactEmail" />
+			<column-definition name="Phone" dataType="string" variableName="agencyContactPhone" />
+			<column-definition name="Fax" dataType="string" variableName="agencyContactFax" />
+			<column-definition name="FirstName" dataType="string" variableName="agencyContactFirstName" />
+			<column-definition name="MiddleName" dataType="string" variableName="agencyContactMiddleName" />
+			<column-definition name="LastName" dataType="string" variableName="agencyContactLastName" />
+			<column-definition name="UnparsedContent" dataType="string" variableName="agencyContactUnparsed" />
+			<default-column-value-mapping>
+				<default-value columnName="BidID" defaultValue="bidID" passByValue="false" />
+				<default-value columnName="LocationOf" defaultValue="Agency" passByValue="true" />
+			</default-column-value-mapping>
+		</table-definition>
+
+		<table-definition name="PopBidSetAside" displayName="Bid Set Aside" showInUI="true" usedInBidCrawler="true" usedInOrgCrawler="false" usedInBidResultsCrawler="false" usedInPlanHolderCrawler="false">
+			<column-definition name="Dbe_code" dataType="string" variableName="dbdSetAsideCode" />
+			<default-column-value-mapping>
+				<default-value columnName="BidID" defaultValue="bidID" passByValue="false" />
+			</default-column-value-mapping>
+		</table-definition>
+
+		<table-definition name="PopBidDocument" displayName="Bid Document" showInUI="false" usedInBidCrawler="true" usedInOrgCrawler="false" usedInBidResultsCrawler="false" usedInPlanHolderCrawler="false">
+			<default-column-value-mapping>
+				<default-value columnName="BidID" defaultValue="bidID" passByValue="false" />
+			</default-column-value-mapping>
+		</table-definition>
+
+	</supported-tables>
+
+</code-gen>
