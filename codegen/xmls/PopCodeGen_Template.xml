@@ -1,5 +1,5 @@
 <crawler name="Poplicus_FED_ARMY1" handlePopup="true" clientName="" siteName="" sourceID="" sourceName="" invokeBasePBC="true" invokeBaseSBC="true" invokeBaseTBC="false">
-	<constructor invokeSourceMapConfig="true">
+	<constructor invokeSourceMapConfig="true branch">
 		<parameters>
 			<parameter name="cEXWB" type="primaryBrowser" passByValue="true" passByReference="false">
 				<value><![CDATA[]]></value>
