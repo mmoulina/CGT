@@ -1,0 +1,206 @@
+<crawler name="Poplicus_FED_ARMY1" handlePopup="true" clientName="" siteName="" sourceID="" sourceName="" invokeBasePBC="true" invokeBaseSBC="true" invokeBaseTBC="false">
+	<constructor invokeSourceMapConfig="true">
+		<parameters>
+			<parameter name="cEXWB" type="primaryBrowser" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="cEXWB" type="secondaryBrowser" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="cEXWB" type="tertiaryBrowser" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="UserInput" type="userInput" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+		</parameters>
+		<source-map-config type="proposalType"/>
+	</constructor>
+
+	<super-constructor>
+		<parameters>
+			<parameter name="cEXWB" type="primaryBrowser" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="cEXWB" type="secondaryBrowser" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="cEXWB" type="tertiaryBrowser" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="string" type="CLIENT_NAME" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="string" type="SITE_NAME" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="string" type="SOURCE_ID" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="UserInput" type="userInput" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+		</parameters>
+	</super-constructor>
+
+	<primary-browser securedWebpage="true" downloadImages="false" downloadScripts="false">
+		<conditions>
+			<condition name="" superCondition="true">
+				<lhsOperand><![CDATA[primaryBrowserHTML]]></lhsOperand>
+				<operator>contains</operator>
+				<rhsOperand><![CDATA[null]]></rhsOperand>
+			</condition>
+		</conditions>
+	</primary-browser>
+
+	<secondary-browser securedWebpage="false" downloadImages="false" downloadScripts="false">
+		<conditions>
+			<condition name="" superCondition="true">
+				<lhsOperand><![CDATA[secondaryBrowserHTML]]></lhsOperand>
+				<operator>contains</operator>
+				<rhsOperand><![CDATA[null]]></rhsOperand>
+			</condition>
+		</conditions>
+	</secondary-browser>
+
+	<tertiary-browser securedWebpage="false" downloadImages="false" downloadScripts="false">
+		<conditions>
+			<condition name="" superCondition="true">
+				<lhsOperand><![CDATA[tertiaryBrowserHTML]]></lhsOperand>
+				<operator>contains</operator>
+				<rhsOperand><![CDATA[null]]></rhsOperand>
+			</condition>
+		</conditions>
+	</tertiary-browser>
+
+	<web-pages>
+		<web-page name="page_1" type="search" navigationOrder="1" executeOnce="false" browser="primary">
+			<url><![CDATA[]]></url>
+			<conditions>
+				<condition name="" superCondition="false">
+					<lhsOperand><![CDATA[]]></lhsOperand>
+					<operator></operator>
+					<rhsOperand><![CDATA[]]></rhsOperand>
+				</condition>
+				<condition name="" superCondition="true">
+					<lhsOperand><![CDATA[]]></lhsOperand>
+					<operator></operator>
+					<rhsOperand><![CDATA[]]></rhsOperand>
+				</condition>
+			</conditions>
+			<main_if>
+				<conditions>
+					<condition name="pop:crwl:cons:1" superCondition="false">
+						<lhsOperand><![CDATA[]]></lhsOperand>
+						<operator></operator>
+						<rhsOperand><![CDATA[]]></rhsOperand>
+					</condition>
+					<condition name="" superCondition="true">
+						<lhsOperand><![CDATA[]]></lhsOperand>
+						<operator></operator>
+						<rhsOperand><![CDATA[]]></rhsOperand>
+					</condition>
+				</conditions>
+				<if>
+					<conditions>
+						<condition name="pop:crwl:cons:1" superCondition="false">
+							<lhsOperand><![CDATA[]]></lhsOperand>
+							<operator></operator>
+							<rhsOperand><![CDATA[]]></rhsOperand>
+						</condition>
+						<condition name="" superCondition="true">
+							<lhsOperand><![CDATA[]]></lhsOperand>
+							<operator></operator>
+							<rhsOperand><![CDATA[]]></rhsOperand>
+						</condition>
+					</conditions>
+
+					<code-block>
+						<line-of-code name="pop:crwl:loc:1">
+							<lhs-definition type="">
+								<variable name="" type=""/><value><![CDATA[]]></value></variable>
+							</lhs-definition>
+							<rhs-definition type="">
+								<function_definition name="" packageName="" className="">
+									<parameter name="" type=""><value><![CDATA[]]></value></parameter>
+									<parameter name="" type=""><value><![CDATA[]]></value></parameter>
+									<supporting_function name="">
+										<parameter name="" type=""><value><![CDATA[]]></value></parameter>
+										<parameter name="" type=""><value><![CDATA[]]></value></parameter>
+									</supporting_function>
+								</function_definition>
+								<action type="" browserType=""> <!-- For CollectResultLinks and StartTimer no sub tags--> <!-- buttonClick and parse-result would use element-->
+									<element elementTagType="" elementFieldType="" exactMatch=""><value><![CDATA[]]></value></button-click>
+									<navigate><url><![CDATA[]]></url></navigate>
+									<function_definition name="" packageName="" className="">
+										<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+										<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+										<supporting_function name="">
+											<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+											<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+										</supporting_function>
+									</function_definition>
+								</action>
+								<expression>
+									<operand>
+										<string type="" passByValue="true" passByReference="false"><value><![CDATA[1]]></value></string>
+										<function_definition name="" packageName="" className="">
+											<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+											<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+											<supporting_function name="">
+												<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+												<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+											</supporting_function>
+										</function_definition>
+										<action type="" browserType=""> <!-- For CollectResultLinks and StartTimer no sub tags--> <!-- buttonClick and parse-result would use element-->
+											<element elementTagType="" elementFieldType="" exactMatch=""><value><![CDATA[]]></value></button-click>
+											<navigate><url><![CDATA[]]></url></navigate>
+											<function_definition name="" packageName="" className="">
+												<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+												<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+												<supporting_function name="">
+													<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+													<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+												</supporting_function>
+											</function_definition>
+										</action>
+									</operand>
+									<operator>plus</operator>
+									<operand></operand>
+								</expression>
+							</rhs-definition>
+						</line-of-code>
+						<action type="" browserType=""> <!-- For CollectResultLinks and StartTimer no sub tags--> <!-- buttonClick and parse-result would use element-->
+							<element elementTagType="" elementFieldType="" exactMatch=""><value><![CDATA[]]></value></button-click>
+							<navigate><url><![CDATA[]]></url></navigate>
+							<function_definition name="" packageName="" className="">
+								<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+								<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+								<supporting_function name="">
+									<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+									<parameter name="" type="" passByValue="true" passByReference="false"><value><![CDATA[]]></value></parameter>
+								</supporting_function>
+							</function_definition>
+						</action>
+						<parseResult mainHTML="" unparsedHTML=""/> -- not implemented yet
+					</code-block>
+				</if>
+				<else-if>
+					<condition name="" superCondition="true">
+						<lhsOperand><![CDATA[]]></lhsOperand>
+						<operator></operator>
+						<rhsOperand><![CDATA[]]></rhsOperand>
+					</condition>
+					<code-block>
+						<parseResult mainHTML="" unparsedHTML=""/>
+					</code-block>
+				</else-if>
+				<else>
+				</else>
+			</main_if>
+		</web-page>
+
+	</web-pages>
+
+
+</crawler>

@@ -1,0 +1,206 @@
+<crawler name="Poplicus_FED_ARMY1" handlePopup="true" clientName="Poplicus" siteName="FED_ARMY_1" sourceID="100012" sourceName="FED-ARMY-1" invokeBasePBC="true" invokeBaseSBC="true" invokeBaseTBC="false">
+	<constructor>
+		<parameters>
+			<parameter name="primaryBrowser" type="cEXWB" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="secondaryBrowser" type="cEXWB" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="tertiaryBrowser" type="cEXWB" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="userInput" type="UserInput" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+		</parameters>
+		<source-map-config type="proposalType"/>
+	</constructor>
+
+	<super-constructor>
+		<parameters>
+			<parameter name="primaryBrowser" type="cEXWB" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="secondaryBrowser" type="cEXWB" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="tertiaryBrowser" type="cEXWB" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="CLIENT_NAME" type="string" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="SITE_NAME" type="string" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="SOURCE_ID" type="string" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+			<parameter name="userInput" type="UserInput" passByValue="true" passByReference="false">
+				<value><![CDATA[]]></value>
+			</parameter>
+		</parameters>
+	</super-constructor>
+
+	<primary-browser securedWebpage="true" downloadImages="false" downloadScripts="false">
+		<conditions>
+			<condition name="pop:crwl:cons:1" superCondition="true">
+				<lhsOperand><![CDATA[_primaryBrowser.GetInnerHTML()]]></lhsOperand>
+				<operator>NotEquals</operator>
+				<rhsOperand><![CDATA[null]]></rhsOperand>
+			</condition>
+		</conditions>
+	</primary-browser>
+
+	<secondary-browser securedWebpage="false" downloadImages="false" downloadScripts="false">
+		<conditions>
+			<condition name="pop:crwl:cons:2" superCondition="false">
+				<lhsOperand><![CDATA[_secondaryBrowser]]></lhsOperand>
+				<operator>contains</operator>
+				<rhsOperand><![CDATA[null]]></rhsOperand>
+			</condition>
+		</conditions>
+	</secondary-browser>
+
+	<tertiary-browser securedWebpage="false" downloadImages="false" downloadScripts="false">
+		<conditions>
+			<condition name="pop:crwl:cons:3" superCondition="false">
+				<lhsOperand><![CDATA[_tertiaryBrowser]]></lhsOperand>
+				<operator>contains</operator>
+				<rhsOperand><![CDATA[null]]></rhsOperand>
+			</condition>
+		</conditions>
+	</tertiary-browser>
+
+	<web-pages>
+		<web-page name="page_1" type="search" navigationOrder="1" executeOnce="false" browser="primary">
+			<url><![CDATA[https://acquisition.army.mil/asfi/solicitation_search_form.cfm]]></url>
+			<conditions>
+				<condition name="pop:crwl:cons:4" superCondition="true">
+					<lhsOperand><![CDATA[primaryBrowserHTML]]></lhsOperand>
+					<operator>contains</operator>
+					<rhsOperand><![CDATA[value="Most recently posted solicitations"]]></rhsOperand>
+				</condition>
+			</conditions>
+			<main_if>
+				<conditions></conditions>
+				<code-block>
+					<action type="ButtonClick" browserType="primary">
+						<element elementTagType="input" elementFieldType="value" exactMatch="false">
+							<value><![CDATA[Most recently posted solicitations]]></value>
+						</element>
+					</action>
+				</code-block>
+			</main_if>
+		</web-page>
+
+		<web-page name="page_2" type="search" navigationOrder="2" executeOnce="false" browser="primary">
+			<url><![CDATA[https://acquisition.army.mil/asfi/solicitation_search_form.cfm]]></url>
+			<conditions>
+				<condition name="pop:crwl:cons:5" superCondition="true">
+					<lhsOperand><![CDATA[primaryBrowserHTML]]></lhsOperand>
+					<operator>contains</operator>
+					<rhsOperand><![CDATA[Navigation to the webpage was canceled]]></rhsOperand>
+				</condition>
+			</conditions>
+			<main_if>
+				<conditions></conditions>
+				<code-block>
+					<action type="URLNavigation" browserType="primary">
+						<navigate><url><![CDATA[https://acquisition.army.mil/asfi/solicitation_search_form.cfm]]></url></navigate>
+					</action>
+				</code-block>
+			</main_if>
+		</web-page>
+
+		<web-page name="page_3" type="search" navigationOrder="3" executeOnce="false" browser="primary">
+			<url><![CDATA[https://acquisition.army.mil/asfi/solicitation_search_form.cfm]]></url>
+			<conditions>
+				<condition name="pop:crwl:cons:6" superCondition="true">
+					<lhsOperand><![CDATA[primaryBrowserHTML]]></lhsOperand>
+					<operator>contains</operator>
+					<rhsOperand><![CDATA[>This program cannot display the webpage<]]></rhsOperand>
+				</condition>
+			</conditions>
+			<main_if>
+				<conditions></conditions>
+				<code-block>
+					<action type="URLNavigation" browserType="primary">
+						<navigate><url><![CDATA[https://acquisition.army.mil/asfi/solicitation_search_form.cfm]]></url></navigate>
+					</action>
+				</code-block>
+			</main_if>
+		</web-page>
+
+		<web-page name="page_4" type="search" navigationOrder="4" executeOnce="true" browser="primary">
+			<url><![CDATA[]]></url>
+			<conditions>
+				<condition name="pop:crwl:cons:7" superCondition="false">
+					<lhsOperand><![CDATA[primaryBrowserHTML]]></lhsOperand>
+					<operator>contains</operator>
+					<rhsOperand><![CDATA[Solicitation search results for most recently posted solicitations]]></rhsOperand>
+				</condition>
+				<condition name="pop:crwl:cons:8" superCondition="false">
+					<lhsOperand><![CDATA[primaryBrowserHTML]]></lhsOperand>
+					<operator>contains</operator>
+					<rhsOperand><![CDATA[Hi..How are you?]]></rhsOperand>
+				</condition>
+				<condition name="pop:crwl:cons:9" superCondition="true">
+					<lhsOperand><![CDATA[pop:crwl:cons:7]]></lhsOperand>
+					<operator>LogicalAND</operator>
+					<rhsOperand><![CDATA[pop:crwl:cons:8]]></rhsOperand>
+				</condition>
+			</conditions>
+			<main_if>
+				<conditions></conditions>
+				<code-block>
+					<line-of-code name="pop:crwl:loc:1">
+						<lhs-definition type="AssignValueToAnExistingVariable">
+							<variable name="optionValue" type="string">
+								<value><![CDATA[ABCDEdF]]></value>
+							</variable>
+						</lhs-definition>
+						<rhs-definition type="Expression">
+							<expression>
+								<operand>
+									<function_definition name="TextBeforeTag1UntilTag2" packageName="Functions" className="Text">
+										<parameter name="input" type="" passByValue="false" passByReference="true">
+											<value><![CDATA[primaryBrowserHTML]]></value>
+										</parameter>
+										<parameter name="tag1" type="" passByValue="true" passByReference="false">
+											<value><![CDATA[>ALL(]]></value>
+										</parameter>
+										<parameter name="tag2" type="" passByValue="true" passByReference="false">
+											<value><![CDATA[=]]></value>
+										</parameter>
+									</function_definition>
+								</operand>
+								<operator>plus</operator>
+								<operand>
+									<string whatObject="string" type="" name="" passByValue="true" passByReference="false"><value><![CDATA[1]]></value></string>
+								</operand>
+							</expression>
+						</rhs-definition>
+					</line-of-code>
+					<action type="SelectOptionItemWithOnChange" browserType="primary">
+						<function_definition name="TextBeforeTag1UntilTag2" packageName="Functions" className="Text">
+							<parameter name="input" type="" passByValue="false" passByReference="true">
+								<value><![CDATA[primaryBrowserHTML]]></value>
+							</parameter>
+							<parameter name="tag1" type="" passByValue="true" passByReference="false">
+								<value><![CDATA[>ALL(]]></value>
+							</parameter>
+							<parameter name="tag2" type="" passByValue="true" passByReference="false">
+								<value><![CDATA[=]]></value>
+							</parameter>
+						</function_definition>
+					</action>
+				</code-block>
+			</main_if>
+		</web-page>
+
+	</web-pages>
+
+
+</crawler>

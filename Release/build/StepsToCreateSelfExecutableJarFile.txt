@@ -1,0 +1,16 @@
+*************************************************
+*                                               *
+* Steps to create self executable jar           *
+*                                               *
+*************************************************
+
+1. Create a folder C:\CreateJarFile
+2. Copy com folder to C:\CreateJarFile
+3. Copy tp folder to C:\CreateJarFile
+4. Copy manifest.txt file to C:\CreateJarFile. manifest.txt file is present in /Release/build folder.
+5. Create folder META-INF in C:\CreateJarFile
+6. Copy codegentool_config.xml file to C:\CreateJarFile\META-INF folder. codegentool_config.xml file is present in /Release/build folder.
+7. Open command prompt, ensure jdk is in path and execute below command.
+	a. jar cvfm CodeGen.jar manifest.txt com META-INF tp
+8. Test CodeGen.jar file.
+
